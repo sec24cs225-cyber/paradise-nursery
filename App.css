@@ -1,0 +1,275 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f8f2;
+  color: #203326;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+/* Landing-page background image implementation required by the assignment */
+.landing-page {
+  min-height: 100vh;
+  background-image:
+    linear-gradient(rgba(12, 38, 19, 0.55), rgba(12, 38, 19, 0.55)),
+    url("https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=1800&q=85");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.overlay {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.landing-content {
+  max-width: 720px;
+  text-align: center;
+  color: white;
+  padding: 40px;
+}
+
+.eyebrow {
+  letter-spacing: 5px;
+  font-weight: bold;
+}
+
+.landing-content h1 {
+  font-size: clamp(3rem, 8vw, 6.5rem);
+  margin: 10px 0;
+}
+
+.landing-text {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin: 20px auto 30px;
+}
+
+.primary-btn,
+.add-btn,
+.checkout-btn {
+  border: 0;
+  border-radius: 10px;
+  padding: 13px 22px;
+  background: #2f7d4a;
+  color: white;
+  font-weight: bold;
+}
+
+.primary-btn:hover,
+.add-btn:hover,
+.checkout-btn:hover {
+  background: #236238;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 6%;
+  background: white;
+  box-shadow: 0 2px 14px rgba(0,0,0,.08);
+}
+
+.brand {
+  border: 0;
+  background: transparent;
+  color: #235c35;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 8px;
+}
+
+.navbar nav button {
+  border: 0;
+  background: transparent;
+  padding: 9px 12px;
+  color: #294c35;
+  font-weight: 600;
+}
+
+.page {
+  max-width: 1200px;
+  margin: auto;
+  padding: 42px 6%;
+}
+
+.page-title {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.category {
+  margin: 35px 0;
+}
+
+.category h2 {
+  color: #285f38;
+  border-bottom: 2px solid #d7e6d8;
+  padding-bottom: 10px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 22px;
+}
+
+.product-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.product-info h3,
+.product-info p {
+  margin: 0;
+}
+
+.product-info .description {
+  color: #657269;
+  line-height: 1.5;
+  font-size: .92rem;
+  flex: 1;
+}
+
+.price {
+  font-size: 1.15rem;
+  font-weight: bold;
+  color: #27663a;
+}
+
+.cart-page {
+  max-width: 1100px;
+  margin: auto;
+  padding: 42px 6%;
+}
+
+.cart-row {
+  background: white;
+  border-radius: 14px;
+  padding: 15px;
+  margin-bottom: 14px;
+  display: grid;
+  grid-template-columns: 90px 1fr auto auto auto;
+  gap: 18px;
+  align-items: center;
+  box-shadow: 0 3px 14px rgba(0,0,0,.06);
+}
+
+.cart-row img {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantity button {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #cbd9cc;
+  background: #f3f8f3;
+  border-radius: 7px;
+}
+
+.remove-btn {
+  border: 0;
+  background: #fff0f0;
+  color: #b52c2c;
+  padding: 9px 12px;
+  border-radius: 7px;
+}
+
+.cart-summary {
+  margin-top: 25px;
+  background: white;
+  padding: 24px;
+  border-radius: 14px;
+  text-align: right;
+}
+
+.cart-summary h2 {
+  margin-top: 0;
+}
+
+.empty {
+  text-align: center;
+  padding: 80px 20px;
+  background: white;
+  border-radius: 15px;
+}
+
+.about {
+  max-width: 850px;
+  margin: auto;
+  padding: 70px 6%;
+  line-height: 1.8;
+}
+
+.about h1 {
+  color: #27663a;
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .navbar nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .cart-row {
+    grid-template-columns: 70px 1fr;
+  }
+
+  .cart-row > *:nth-child(n+3) {
+    grid-column: 2;
+  }
+}
